@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Chivo'
+}
+
+.aboutSection {
+  width: 50%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.frontline {
+  font-family: "Caveat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Chivo';
+}
+
+.firstName {
+  color: red;
+  margin-left: 1rem;
+}
+
+.animated-text {
+  font-family: "Kaushan Script", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 1rem 0rem 0rem 1rem;
+  font-family: 'Chivo';
+
+}
+
+.about-info {
+  font-family: "Rubik", serif;
+  font-size: 18px;
+  /* color: white; */
+  margin: 1rem 0rem 0rem 1rem;
+}
+
+.highlight {
+  color: red;
+}
+
+.buttons {
+  margin: 1rem 0rem 0rem 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 2%;
+}
+
+.buttons>button {
+  font-family: "Rubik", serif;
+  padding: 1% 2%;
+  font-size: 18px;
+  border-radius: 4%;
+  cursor: pointer;
+}
+
+.hire-me-button {
+  color: red;
+  border: 1px solid rgb(104, 104, 104);
+  transition: 600ms ease-in-out all;
+  background: white;
+}
+
+.hire-me-button:hover {
+  transform: scale(1.08);
+  background: red;
+  border: 1px solid red;
+  color: white;
+
+}
+
+.lets-talk-button {
+  color: black;
+  border: 1px solid rgb(104, 104, 104);
+  background: white;
+}
+
+.imageSection {
+  width: 30%;
+  clip-path: ellipse(50% 50% at 50% 50%);
+  overflow: hidden;
+}
+
+
+.profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.profile:hover {
+  transform: scale(1.08);
+}
