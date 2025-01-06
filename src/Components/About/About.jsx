@@ -84,7 +84,7 @@ function About() {
 
       <div className="imageSection">
         <img
-          src="src\assets\profile.png"
+          src="/profile.png"
           alt="Sanjeev Kumar"
           className="profile"
         />
