@@ -1,0 +1,17 @@
+.particles-container {
+    width: 100%;
+    height: 100%;
+}
+
+.particles-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.particles-container>*:not(canvas) {
+    /* position: relative; */
+    z-index: 1;
+}

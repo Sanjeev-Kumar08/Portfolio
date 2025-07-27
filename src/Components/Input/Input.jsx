@@ -1,20 +1,32 @@
-import React from 'react'
+import React from "react";
 
-import './input.css'
-
-function Input({type, placeholder, label, id , name}) {
+function Input({ type, placeholder, label, id, name }) {
   return (
-    <div className='input'>
-      <label htmlFor={id} className='label'>{label}</label>
-      {
-        id !== 'message-field' ? (
-          <input type={type} id={id} placeholder={placeholder} name={name} className="input-field" required/>
-        ) : (
-          <textarea type={type} id={id} placeholder={placeholder} name={name} className="input-field textarea-field" required/>
-        )
-      }
+    <div className="w-full custom-meriva">
+      <label htmlFor={id} className="block mb-1 ml-1 text-[#836FFF] text-[18px]">
+        {label}
+      </label>
+
+      {id !== "message-field" ? (
+        <input
+          type={type}
+          id={id}
+          name={name}
+          placeholder={placeholder}
+          required
+          className="w-full px-3 py-2 border-2 border-gray-500 rounded-lg text-[15px] focus:outline-none focus:border-[#836FFF] focus:shadow-[0_0_3px_#836FFF]"
+        />
+      ) : (
+        <textarea
+          id={id}
+          name={name}
+          placeholder={placeholder}
+          required
+          className="w-full px-3 py-2 border-2 border-gray-500 rounded-lg text-[15px] h-[100px] focus:outline-none focus:border-[#836FFF] focus:shadow-[0_0_3px_#836FFF]"
+        ></textarea>
+      )}
     </div>
-  )
+  );
 }
 
-export default Input
+export default Input;

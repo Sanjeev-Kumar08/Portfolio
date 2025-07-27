@@ -2,8 +2,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 1rem;
-  font-family: 'Chivo'
+  font-family: 'Chivo';
+  background-color: rgba(245, 245, 245, 0);
+  box-shadow: 0px 0px 10px rgb(108, 108, 108);
+  border-radius: 35px;
+  margin-top: 50px;
+  color: whitesmoke;
+  padding: 50px 0px;
 }
 
 .aboutSection {
@@ -12,13 +17,13 @@
 }
 
 .frontline {
-  font-family: "Caveat", serif;
+  /* font-family: "Caveat"; */
   font-optical-sizing: auto;
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: 'Chivo';
+  /* font-family: 'Chivo'; */
 }
 
 .firstName {
@@ -27,24 +32,23 @@
 }
 
 .animated-text {
-  font-family: "Kaushan Script", serif;
+  /* font-family: "Kaushan Script", serif; */
   font-optical-sizing: auto;
   font-weight: 700;
   font-size: 2rem;
   margin: 1rem 0rem 0rem 1rem;
-  font-family: 'Chivo';
-
+  /* font-family: 'Chivo';/ */
 }
 
 .about-info {
-  font-family: "Rubik", serif;
+  /* font-family: "Rubik", serif; */
   font-size: 18px;
   /* color: white; */
   margin: 1rem 0rem 0rem 1rem;
 }
 
 .highlight {
-  color: red;
+  color:red;
 }
 
 .buttons {
@@ -57,9 +61,8 @@
 
 .buttons>button {
   font-family: "Rubik", serif;
-  padding: 1% 2%;
+  /* padding: 1% 2%; */
   font-size: 18px;
-  border-radius: 4%;
   cursor: pointer;
 }
 
@@ -79,7 +82,9 @@
 }
 
 .lets-talk-button {
+  padding: 1% 2%;
   color: black;
+  border-radius: 10px;
   border: 1px solid rgb(104, 104, 104);
   background: white;
 }
@@ -101,4 +106,84 @@
 
 .profile:hover {
   transform: scale(1.08);
+}
+
+/* ******************JELLY BUTTON******************** */
+.Btn {
+  position: relative;
+  border-radius: 50px;
+  padding: 2% 4%;
+  border: none;
+  background-color: rgb(255, 60, 60);
+  /* 🔴 Red base */
+  color: white;
+  box-shadow:
+    0px 10px 10px rgb(255, 179, 179) inset,
+    /* soft red inner glow */
+    0px 5px 10px rgba(5, 5, 5, 0.212),
+    /* outer shadow */
+    0px -10px 10px rgb(204, 0, 0) inset;
+  /* dark red inner top shine */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Btn::before {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* subtle top highlight */
+  content: "";
+  filter: blur(1px);
+  top: 7px;
+  border-radius: 50%;
+}
+
+.Btn::after {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* subtle bottom shine */
+  content: "";
+  filter: blur(1px);
+  bottom: 7px;
+  border-radius: 50%;
+}
+
+.Btn:hover {
+  animation: jello-horizontal 0.9s both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
 }

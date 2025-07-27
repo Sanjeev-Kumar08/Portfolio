@@ -1,9 +1,10 @@
 import React from "react";
 import ProjectCard from "../Card/ProjectCard";
 
-import "./Projects.css";
+// import "./Projects.css";
+import FadeInOnScroll from "../FadeInOnScroll/FadeInOnScroll";
 
-function App() {
+const Projects = React.forwardRef((props, ref) => {
   const projects = [
     {
       id: 1,
@@ -41,15 +42,6 @@ function App() {
       image: "/bmi.jpg",
     },
     {
-      id: 5,
-      title: "Dynamic Dashboard",
-      description:
-        "Effortlessly manage and customize your dashboard with dynamic widgets and flexible JSON configuration.",
-      github: "https://github.com/Sanjeev-Kumar08/CNAPP-Dashboard",
-      liveDemo: "#",
-      image: "/Dashboardd.jpg",
-    },
-    {
       id: 6,
       title: "Rock-Paper-Scissors",
       description:
@@ -74,24 +66,32 @@ function App() {
         "Creates secure, customizable passwords with user-defined settings and intuitive controls",
       github: "https://github.com/Sanjeev-Kumar08/PasswordGenerator",
       liveDemo: "https://passwordgenerator-ruby-rho.vercel.app/",
-      image: "/pass-generator.png",
+      image: "/passwordgenerator.jpg",
     },
   ];
 
   return (
-    <section id="ProjectsSection" className="project-section-container">
-      <p className="para-text">Browse My Recent</p>
-      <h1 className="projects-heading">
-        <span className="black">Pro</span>
-        <span className="red">jects</span>
-      </h1>
-      <div className="project-grid">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
-    </section>
+    <FadeInOnScroll>
+      <section
+        ref={ref}
+        id="ProjectsSection"
+        className="px-4 py-12 sm:px-6 lg:px-20 bg-[rgba(245,245,245,0)] shadow-[0px_0px_10px_rgb(108,108,108)] rounded-[35px] mt-[50px] text-white sm:py-12 custom-meriva"
+      >
+        <p className="text-center text-lg sm:text-xl font-custom-meriva">
+          Browse My Recent
+        </p>
+        <h1 className="text-4xl sm:text-5xl font-bold text-center mb-10 font-custom-meriva tracking-[0.05em]">
+          <span className="text-white">Pro</span>
+          <span className="text-[#836FFF]">jects</span>
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </section>
+    </FadeInOnScroll>
   );
-}
+});
 
-export default App;
+export default Projects;
