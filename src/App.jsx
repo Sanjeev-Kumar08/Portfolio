@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import About from "./Components/About/About";
@@ -6,7 +6,6 @@ import Skills from "./Components/Skills/Skills";
 import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
 import Particles from "./Components/Particles/Particles";
-import FadeInOnScroll from "./Components/FadeInOnScroll/FadeInOnScroll";
 
 function App() {
   const aboutRef = useRef(null);
@@ -15,7 +14,6 @@ function App() {
   const contactRef = useRef(null);
 
   const handleScrollTo = (ref) => {
-    console.log('ref', ref);
     const isMobile = window.innerWidth < 640;
     const topOffset = isMobile ? 260 : 40;
     if (ref?.current) {

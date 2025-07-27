@@ -1,14 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Code,
-  Database,
-  Palette,
-  Server,
-  Smartphone,
-  Globe,
-} from "lucide-react";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import skillsData from "../../data";
@@ -22,7 +13,7 @@ export default function SkillsCarousel() {
     if (!isHovered) {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) =>
-          prevIndex === skillsData.length - 1 ? 0 : prevIndex + 1
+          prevIndex === skillsData.length - 1 ? 0 : prevIndex + 1,
         );
       }, 3000); // Change slide every 3 seconds
 
@@ -32,13 +23,13 @@ export default function SkillsCarousel() {
 
   const goToPrevious = () => {
     setCurrentIndex(
-      currentIndex === 0 ? skillsData.length - 1 : currentIndex - 1
+      currentIndex === 0 ? skillsData.length - 1 : currentIndex - 1,
     );
   };
 
   const goToNext = () => {
     setCurrentIndex(
-      currentIndex === skillsData.length - 1 ? 0 : currentIndex + 1
+      currentIndex === skillsData.length - 1 ? 0 : currentIndex + 1,
     );
   };
 

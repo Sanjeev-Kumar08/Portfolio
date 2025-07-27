@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-scroll";
-import "./Navbar.css";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
+import "./Navbar.css";
 
 function Navbar({ handleScrollTo, navLinks }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,9 +48,9 @@ function Navbar({ handleScrollTo, navLinks }) {
                   <li key={index} className="transition-transform">
                     <span
                       className="relative inline-block pb-1 cursor-pointer
-                    before:content-[''] before:absolute before:bottom-1 before:left-0
-                    before:h-[3px] before:w-0 before:bg-red-500
-                    before:transition-all before:duration-300 hover:before:w-full"
+                      before:content-[''] before:absolute before:bottom-1 before:left-0
+                      before:h-[3px] before:w-0 before:bg-red-500
+                      before:transition-all before:duration-300 hover:before:w-full"
                       onClick={
                         item.isResume
                           ? handleDownload
@@ -76,6 +76,7 @@ function Navbar({ handleScrollTo, navLinks }) {
           </div>
         </header>
       </nav>
+
       {/* Mobile Dropdown */}
       {menuOpen && (
         <div className="sm:hidden px-4 pb-4 mt-3 backdrop-blur-3xl">
@@ -87,9 +88,9 @@ function Navbar({ handleScrollTo, navLinks }) {
               >
                 <span
                   className="relative inline-block pb-1 cursor-pointer hover:text-red-500
-                before:content-[''] before:absolute before:bottom-0 before:left-0
-                before:h-[3px] before:w-0 before:bg-red-500
-                before:transition-all before:duration-300 hover:before:w-full"
+                  before:content-[''] before:absolute before:bottom-0 before:left-0
+                  before:h-[3px] before:w-0 before:bg-red-500
+                  before:transition-all before:duration-300 hover:before:w-full"
                   onClick={() => {
                     if (item.isResume) {
                       handleDownload();
@@ -119,5 +120,17 @@ function Navbar({ handleScrollTo, navLinks }) {
     </>
   );
 }
+
+// ✅ Add PropTypes
+Navbar.propTypes = {
+  handleScrollTo: PropTypes.func.isRequired,
+  navLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      to: PropTypes.string,
+      isResume: PropTypes.bool,
+    }),
+  ).isRequired,
+};
 
 export default Navbar;

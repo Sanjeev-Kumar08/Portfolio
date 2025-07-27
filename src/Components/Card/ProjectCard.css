@@ -1,65 +1,65 @@
 .project-card {
-    height: 100%;
-    width: 100%;
-    background: #eeeeee;
-    border-radius: 35px;
-    box-shadow: 0px 0px 8px rgb(108, 108, 108);
-    padding: 1rem 1rem 0rem 1rem;
-    text-align: center;
-    border: 1px solid rgb(193, 193, 193);
-    font-family: "Rubik", serif;
-    cursor: pointer;
-    transition: 0.3s ease-in-out all;
+  height: 100%;
+  width: 100%;
+  background: #eeeeee;
+  border-radius: 35px;
+  box-shadow: 0px 0px 8px rgb(108, 108, 108);
+  padding: 1rem 1rem 0rem 1rem;
+  text-align: center;
+  border: 1px solid rgb(193, 193, 193);
+  font-family: "Rubik", serif;
+  cursor: pointer;
+  transition: 0.3s ease-in-out all;
 }
 
 .project-card:hover {
-    background-color: #f3f3f3;
-    transform: scale(1.07);
-    border: #f3f3f3;
+  background-color: #f3f3f3;
+  transform: scale(1.07);
+  border: #f3f3f3;
 }
 
 .project-image {
-    height: 60%;
-    width: 80%;
-    border-radius: 35px;
-    object-fit: cover;
+  height: 60%;
+  width: 80%;
+  border-radius: 35px;
+  object-fit: cover;
 }
 
 .project-title {
-    color: #222222;
-    font-size: 1.2rem;
-    margin: 1rem 0 0.5rem;
+  color: #222222;
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
 }
 
 .project-description {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 1rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin: 2rem 0rem 0rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 2rem 0rem 0rem 0rem;
 }
 
 .button {
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: #fefefe;
-    color: #000;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #fefefe;
+  color: #000;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .button:hover {
-    background-color: #000000;
-    color: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
 }

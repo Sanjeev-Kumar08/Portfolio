@@ -8,7 +8,8 @@
   box-shadow: 0px 0px 10px rgb(108, 108, 108);
 }
 
-.para-text, .skill-heading{
+.para-text,
+.skill-heading {
   color: whitesmoke;
 }
 
@@ -24,7 +25,7 @@
 }
 
 .skills {
-  color: #836FFF;
+  color: #836fff;
 }
 
 .card-container {
@@ -46,7 +47,7 @@
 
 .skill-card-heading {
   display: block;
-  font-family: 'Meriva', 'Chivo';
+  font-family: "Meriva", "Chivo";
   font-size: 24px;
   /* font-weight: 700; */
   text-align: center;
@@ -102,7 +103,7 @@
   width: 100%;
 }
 
-.cards:has(.card-container:hover)>.card-container:not(:hover) {
+.cards:has(.card-container:hover) > .card-container:not(:hover) {
   filter: blur(7px);
   transform: scale(0.95);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -125,7 +126,7 @@
 
 /* Override inner carousel styles if needed */
 .skills-carousel-wrapper .text-gray-800 {
-  color: #836FFF; /* match your accent color */
+  color: #836fff; /* match your accent color */
 }
 
 .skills-carousel-wrapper .text-gray-600 {
@@ -148,7 +149,7 @@
 }
 
 .skills-carousel-wrapper .hover\\:text-blue-600:hover {
-  color: #836FFF;
+  color: #836fff;
 }
 
 .skills-carousel-wrapper .bg-gray-50 {
@@ -164,5 +165,5 @@
 }
 
 .skills-carousel-wrapper .bg-blue-600 {
-  background-color: #836FFF !important;
+  background-color: #836fff !important;
 }

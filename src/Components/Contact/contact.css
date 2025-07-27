@@ -125,9 +125,9 @@
 }
 
 .footer-image-container {
-    height: 2rem;
-    width: 2rem;
-    overflow: hidden;
+  height: 2rem;
+  width: 2rem;
+  overflow: hidden;
 }
 
 .footer-section-icon {
@@ -143,7 +143,7 @@
   transform: scale(0.9);
 }
 
-.copyright-text{
+.copyright-text {
   font-family: "Chivo", serif;
   font-optical-sizing: auto;
   font-weight: 300;

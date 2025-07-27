@@ -1,14 +1,17 @@
 import { useEffect, useRef } from "react";
 import { Renderer, Camera, Geometry, Program, Mesh } from "ogl";
-
-import './Particles.css';
+import PropTypes from "prop-types";
+import "./Particles.css";
 
 const defaultColors = ["#ffffff", "#ffffff", "#ffffff"];
 
 const hexToRgb = (hex) => {
   hex = hex.replace(/^#/, "");
   if (hex.length === 3) {
-    hex = hex.split("").map((c) => c + c).join("");
+    hex = hex
+      .split("")
+      .map((c) => c + c)
+      .join("");
   }
   const int = parseInt(hex, 16);
   const r = ((int >> 16) & 255) / 255;
@@ -89,7 +92,7 @@ const Particles = ({
   cameraDistance = 20,
   disableRotation = false,
   className,
-  children
+  children,
 }) => {
   const containerRef = useRef(null);
   const mouseRef = useRef({ x: 0, y: 0 });
@@ -130,7 +133,10 @@ const Particles = ({
     const positions = new Float32Array(count * 3);
     const randoms = new Float32Array(count * 4);
     const colors = new Float32Array(count * 3);
-    const palette = particleColors && particleColors.length > 0 ? particleColors : defaultColors;
+    const palette =
+      particleColors && particleColors.length > 0
+        ? particleColors
+        : defaultColors;
 
     for (let i = 0; i < count; i++) {
       let x, y, z, len;
@@ -142,7 +148,10 @@ const Particles = ({
       } while (len > 1 || len === 0);
       const r = Math.cbrt(Math.random());
       positions.set([x * r, y * r, z * r], i * 3);
-      randoms.set([Math.random(), Math.random(), Math.random(), Math.random()], i * 4);
+      randoms.set(
+        [Math.random(), Math.random(), Math.random(), Math.random()],
+        i * 4
+      );
       const col = hexToRgb(palette[Math.floor(Math.random() * palette.length)]);
       colors.set(col, i * 3);
     }
@@ -225,13 +234,42 @@ const Particles = ({
   ]);
 
   return (
-    <div
-    ref={containerRef}
-    className={`particles-container ${className}`}
-  >
-    {children}
-  </div>
+    <div ref={containerRef} className={`particles-container ${className}`}>
+      {children}
+    </div>
   );
+};
+
+Particles.defaultProps = {
+  particleCount: 1000,
+  particleSpread: 10,
+  speed: 0.3,
+  particleColors: [],
+  moveParticlesOnHover: false,
+  particleHoverFactor: 1,
+  alphaParticles: false,
+  particleBaseSize: 300,
+  sizeRandomness: 1,
+  cameraDistance: 20,
+  disableRotation: false,
+  className: "",
+  children: null,
+};
+
+Particles.propTypes = {
+  particleCount: PropTypes.number,
+  particleSpread: PropTypes.number,
+  speed: PropTypes.number,
+  particleColors: PropTypes.arrayOf(PropTypes.string),
+  moveParticlesOnHover: PropTypes.bool,
+  particleHoverFactor: PropTypes.number,
+  alphaParticles: PropTypes.bool,
+  particleBaseSize: PropTypes.number,
+  sizeRandomness: PropTypes.number,
+  cameraDistance: PropTypes.number,
+  disableRotation: PropTypes.bool,
+  className: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default Particles;

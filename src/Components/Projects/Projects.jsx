@@ -94,4 +94,6 @@ const Projects = React.forwardRef((props, ref) => {
   );
 });
 
+Projects.displayName = "Projects";
+
 export default Projects;

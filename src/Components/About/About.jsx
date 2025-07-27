@@ -1,9 +1,9 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
-import "./About.css";
 import SplitText from "../SplitText";
 import FadeInOnScroll from "../FadeInOnScroll/FadeInOnScroll";
+import "./About.css";
 
 const About = React.forwardRef((props, ref) => {
   const emailAddress = "bhardwajsanjeev98055@example.com"; // Replace with your email
@@ -11,7 +11,7 @@ const About = React.forwardRef((props, ref) => {
   const body = "Hello, I am interested in discussing an opportunity with you."; // Optional
 
   const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
-    subject
+    subject,
   )}&body=${encodeURIComponent(body)}`;
 
   return (
@@ -58,8 +58,8 @@ const About = React.forwardRef((props, ref) => {
 
           <div className="custom-meriva sm:text-[16px] md:text-[18px] text-[14px]">
             <p className="sm:ml-4 mb-2 mt-4">
-              I'm a <span className="highlight">Software Developer</span> and
-              CSE graduate with a strong focus on frontend technologies. I
+              I&apos;m a <span className="highlight">Software Developer</span>{" "}
+              and CSE graduate with a strong focus on frontend technologies. I
               specialize in building responsive and user-centric applications
               using <span className="highlight">JavaScript</span>,{" "}
               <span className="highlight">React.js</span>,{" "}
@@ -70,7 +70,7 @@ const About = React.forwardRef((props, ref) => {
               <span className="highlight">MongoDB</span>.
             </p>
             <p className="sm:ml-4 mb-2">
-              I’m passionate about creating seamless user experiences,
+              I&apos;m passionate about creating seamless user experiences,
               integrating <span className="highlight">REST APIs</span>, and
               writing <span className="highlight">clean, scalable code</span>.
               My experience across multiple internships and real-world projects
@@ -79,8 +79,8 @@ const About = React.forwardRef((props, ref) => {
               <span className="highlight">mobile app development</span>.
             </p>
             <p className="sm:ml-4 mb-2">
-              I’m always eager to learn, improve, and contribute to impactful
-              products through modern{" "}
+              I&apos;m always eager to learn, improve, and contribute to
+              impactful products through modern{" "}
               <span className="highlight">frontend frameworks</span> and{" "}
               <span className="highlight">best practices</span>.
             </p>
@@ -117,5 +117,7 @@ const About = React.forwardRef((props, ref) => {
     </FadeInOnScroll>
   );
 });
+
+About.displayName = "About";
 
 export default About;

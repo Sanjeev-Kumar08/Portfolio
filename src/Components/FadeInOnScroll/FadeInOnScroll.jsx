@@ -1,6 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import PropTypes from "prop-types";
 
 const FadeInOnScroll = ({ children, delay = 0 }) => {
   const controls = useAnimation();
@@ -24,6 +25,12 @@ const FadeInOnScroll = ({ children, delay = 0 }) => {
       {children}
     </motion.div>
   );
+};
+
+// ✅ Add prop validation
+FadeInOnScroll.propTypes = {
+  children: PropTypes.node.isRequired,
+  delay: PropTypes.number,
 };
 
 export default FadeInOnScroll;

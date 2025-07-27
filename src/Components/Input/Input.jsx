@@ -1,9 +1,12 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 function Input({ type, placeholder, label, id, name }) {
   return (
     <div className="w-full custom-meriva">
-      <label htmlFor={id} className="block mb-1 ml-1 text-[#836FFF] text-[18px]">
+      <label
+        htmlFor={id}
+        className="block mb-1 ml-1 text-[#836FFF] text-[18px]"
+      >
         {label}
       </label>
 
@@ -28,5 +31,14 @@ function Input({ type, placeholder, label, id, name }) {
     </div>
   );
 }
+
+// ✅ Add prop types
+Input.propTypes = {
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  label: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
 
 export default Input;

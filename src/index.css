@@ -1,44 +1,46 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@700&family=Chivo:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@700&family=Kaushan+Script&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pacifico&family=Playwrite+PL+Guides&family=Rubik+Vinyl&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@700&family=Chivo:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@700&family=Kaushan+Script&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Pacifico&family=Playwrite+PL+Guides&family=Rubik+Vinyl&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 body {
   margin: 0px;
   padding: 0px;
- background-color: #222222;
+  background-color: #222222;
 }
 
 @font-face {
-  font-family: 'Laisha';
-  src: url('/Fonts/Laisha/Laisha.ttf') format('truetype'),
-       url('/Fonts/Laisha/Laisha.otf') format('opentype');
+  font-family: "Laisha";
+  src:
+    url("/Fonts/Laisha/Laisha.ttf") format("truetype"),
+    url("/Fonts/Laisha/Laisha.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Meriva';
-  src: url('/Fonts/Meriva/meriva.ttf') format('truetype'),
-       url('/Fonts/Meriva/meriva.otf') format('opentype');
+  font-family: "Meriva";
+  src:
+    url("/Fonts/Meriva/meriva.ttf") format("truetype"),
+    url("/Fonts/Meriva/meriva.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Anastasia';
-  src: url('/public/Fonts/Anastasia.otf') format('opentype');
+  font-family: "Anastasia";
+  src: url("/public/Fonts/Anastasia.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 .custom-meriva {
-  font-family: 'Meriva', sans-serif;
+  font-family: "Meriva", sans-serif;
 }
 .custom-anastasia {
-  font-family: 'Anastasia', sans-serif;
+  font-family: "Anastasia", sans-serif;
 }
 .custom-laisha {
-  font-family: 'Laisha', sans-serif;
+  font-family: "Laisha", sans-serif;
 }
 .custom-chivo {
-  font-family: 'Chivo', 'Anastasia';
+  font-family: "Chivo", "Anastasia";
 }

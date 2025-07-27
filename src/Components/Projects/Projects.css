@@ -1,53 +1,52 @@
 .project-section-container {
-    padding: 1rem 0rem 3rem 0rem;
-    text-align: center;
-    height: auto;
-    margin-top: 50px;
-    /* padding: 10px 0px 10px 0px; */
-    background: rgba(255, 255, 255, 0);
-    border-radius: 35px;
-    margin-bottom: 10px;
-    box-shadow: 0px 0px 10px rgb(108, 108, 108);
-    color: whitesmoke;
+  padding: 1rem 0rem 3rem 0rem;
+  text-align: center;
+  height: auto;
+  margin-top: 50px;
+  /* padding: 10px 0px 10px 0px; */
+  background: rgba(255, 255, 255, 0);
+  border-radius: 35px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px rgb(108, 108, 108);
+  color: whitesmoke;
 }
 
 .para-text {
-    font-family: "Chivo", serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-size: 14px;
-    margin: 2rem 0rem 0.5rem 0rem;
-    text-align: center;
+  font-family: "Chivo", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-size: 14px;
+  margin: 2rem 0rem 0.5rem 0rem;
+  text-align: center;
 }
 
 .projects-heading {
-    color: red;
-    font-family: "Chivo", serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-size: 38px;
-    margin: 0rem 0rem 1rem 0rem;
+  color: red;
+  font-family: "Chivo", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 38px;
+  margin: 0rem 0rem 1rem 0rem;
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6rem;
-    padding: 0.5rem 5rem;
-    margin-top: 2rem;
-    align-items: center;
-    justify-items: center;
-    width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem;
+  padding: 0.5rem 5rem;
+  margin-top: 2rem;
+  align-items: center;
+  justify-items: center;
+  width: fit-content;
 }
 
 .project-grid:has(.project-card:hover) > .project-card:not(:hover) {
-    filter: blur(5px);
-    transform: scale(0.95);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease-in-out;
-  }
-  
-  .project-card {
-    transition: all 0.4s ease-in-out;
-  }
-  
+  filter: blur(5px);
+  transform: scale(0.95);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+
+.project-card {
+  transition: all 0.4s ease-in-out;
+}

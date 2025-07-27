@@ -189,4 +189,6 @@ const Contact = React.forwardRef((props, ref) => {
   );
 });
 
+Contact.displayName = "Contact";
+
 export default Contact;

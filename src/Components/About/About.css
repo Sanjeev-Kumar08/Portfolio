@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: 'Chivo';
+  font-family: "Chivo";
   background-color: rgba(245, 245, 245, 0);
   box-shadow: 0px 0px 10px rgb(108, 108, 108);
   border-radius: 35px;
@@ -48,7 +48,7 @@
 }
 
 .highlight {
-  color:red;
+  color: red;
 }
 
 .buttons {
@@ -59,7 +59,7 @@
   gap: 2%;
 }
 
-.buttons>button {
+.buttons > button {
   font-family: "Rubik", serif;
   /* padding: 1% 2%; */
   font-size: 18px;
@@ -78,7 +78,6 @@
   background: red;
   border: 1px solid red;
   color: white;
-
 }
 
 .lets-talk-button {
@@ -94,7 +93,6 @@
   clip-path: ellipse(50% 50% at 50% 50%);
   overflow: hidden;
 }
-
 
 .profile {
   width: 100%;
@@ -119,10 +117,8 @@
   color: white;
   box-shadow:
     0px 10px 10px rgb(255, 179, 179) inset,
-    /* soft red inner glow */
-    0px 5px 10px rgba(5, 5, 5, 0.212),
-    /* outer shadow */
-    0px -10px 10px rgb(204, 0, 0) inset;
+    /* soft red inner glow */ 0px 5px 10px rgba(5, 5, 5, 0.212),
+    /* outer shadow */ 0px -10px 10px rgb(204, 0, 0) inset;
   /* dark red inner top shine */
   cursor: pointer;
   display: flex;

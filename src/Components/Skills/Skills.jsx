@@ -1,8 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FadeInOnScroll from "../FadeInOnScroll/FadeInOnScroll";
 import "./Skills.css";
-import skillsData from "../../data";
 import SkillsCarousel from "../../Components/SkillsCarousel/SkillsCarousel";
 
 const Skills = React.forwardRef((props, ref) => {
@@ -25,5 +23,7 @@ const Skills = React.forwardRef((props, ref) => {
     </FadeInOnScroll>
   );
 });
+
+Skills.displayName = "Skills";
 
 export default Skills;
