@@ -15,7 +15,7 @@ function App() {
 
   const handleScrollTo = (ref) => {
     const isMobile = window.innerWidth < 640;
-    const topOffset = isMobile ? 260 : 40;
+    const topOffset = isMobile ? 80 : 110;
     if (ref?.current) {
       const top =
         ref.current.getBoundingClientRect().top + window.scrollY - topOffset;

@@ -19,7 +19,7 @@ const About = React.forwardRef((props, ref) => {
       <section
         ref={ref}
         id="AboutSection"
-        className="flex md:flex-row flex-col justify-around items-center custom-chivo bg-[rgba(245,245,245,0)] shadow-[0px_0px_10px_rgb(108,108,108)] rounded-[35px] mt-[50px] text-white sm:py-12 py-6 px-1"
+        className="flex md:flex-row flex-col justify-around items-center custom-chivo bg-[rgba(245,245,245,0)] shadow-[0px_0px_10px_rgb(108,108,108)] rounded-[35px] mt-[70px] text-white sm:py-12 py-6 px-1"
       >
         <article className="sm:w-1/2 w-full custom-meriva md:order-1 order-2 sm:px-0 px-2">
           <h1 className="frontline tracking-[0.03em]">

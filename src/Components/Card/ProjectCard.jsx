@@ -30,7 +30,7 @@ function ProjectCard({ project }) {
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full px-4 py-2 bg-transparent text-black text-sm hover:bg-black hover:text-white transition-all duration-200"
+            className="rounded-full px-4 py-2 sm:bg-transparent sm:text-black text-white bg-black/90 text-sm hover:bg-black/90 hover:text-white transition-all duration-200"
           >
             GitHub
           </a>
@@ -38,7 +38,7 @@ function ProjectCard({ project }) {
             href={project.liveDemo}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full px-4 py-2 bg-transparent text-black text-sm hover:bg-black hover:text-white transition-all duration-200"
+            className="rounded-full px-4 py-2 sm:bg-transparent sm:text-black text-white bg-black/90 text-sm hover:bg-black/90 hover:text-white transition-all duration-200"
           >
             Live Demo
           </a>

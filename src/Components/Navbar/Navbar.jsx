@@ -23,8 +23,8 @@ function Navbar({ handleScrollTo, navLinks }) {
   return (
     <>
       <nav className="flex justify-center items-center">
-        <header className="sticky top-[10px] z-[999] font-Anastasia bg-white/20 backdrop-blur-[5px] rounded-full navbar-shadow transition-all duration-300 sm:w-1/2 w-full">
-          <div className="flex items-center sm:justify-center justify-between px-8 py-4 md:px-8">
+        <header className="fixed top-[10px] z-1 font-Anastasia bg-white/10 backdrop-blur-[35px] rounded-full navbar-shadow transition-all duration-300 sm:w-1/2 w-full">
+          <div className="flex items-center sm:justify-center justify-between px-6 sm:py-4 py-2 md:px-8">
             {/* Left Sub Container */}
             <div className="sm:hidden flex justify-center items-center tracking-[3px] sm:text-[40px] text-2xl custom-laisha font-bold text-[#836FFF]">
               <span className="text-red-100">Port</span>
@@ -78,19 +78,29 @@ function Navbar({ handleScrollTo, navLinks }) {
       </nav>
 
       {/* Mobile Dropdown */}
-      {menuOpen && (
-        <div className="sm:hidden px-4 pb-4 mt-3 backdrop-blur-3xl">
-          <ul className="flex flex-col gap-4 text-white text-lg">
+      <>
+        <div
+          className={`fixed inset-0 bg-black/10 bg-opacity-50 z-40 transition-opacity duration-700 ${
+            menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+          onClick={() => setMenuOpen(false)}
+        />
+        <div
+          className={`fixed top-[65px] right-0 h-[93%] w-full bg-black/50 rounded-2xl backdrop-blur-[5px] z-50 transform transition-transform duration-500 ease-in-out ${
+            menuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <ul className="flex flex-col gap-4 px-6 mt-6 text-white text-lg">
             {navLinks.map((item, idx) => (
               <li
                 key={idx}
-                className="transition-transform hover:scale-95 text-center"
+                className="transition-transform text-left custom-meriva"
               >
                 <span
                   className="relative inline-block pb-1 cursor-pointer hover:text-red-500
                   before:content-[''] before:absolute before:bottom-0 before:left-0
                   before:h-[3px] before:w-0 before:bg-red-500
-                  before:transition-all before:duration-300 hover:before:w-full"
+                  before:transition-all before:duration-300 hover:before:w-full underline"
                   onClick={() => {
                     if (item.isResume) {
                       handleDownload();
@@ -116,7 +126,7 @@ function Navbar({ handleScrollTo, navLinks }) {
             ))}
           </ul>
         </div>
-      )}
+      </>
     </>
   );
 }
