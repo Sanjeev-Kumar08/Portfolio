@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import Input from "../Input/Input";
 import { SiGithub } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
@@ -10,39 +11,38 @@ import { SiGmail } from "react-icons/si";
 import "./contact.css";
 
 const Contact = React.forwardRef((props, ref) => {
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbwlKaHFTDSOHSAlFM1fWvthltFygfAsl72r1yiSn9wDY30SB5RhaIXoYeeBej0gqffU/exec"; // Replace with your script URL
-
   const [submissionStatus, setSubmissionStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    fetch(scriptURL, {
-      method: "POST",
-      body: new FormData(e.target),
-    })
-      .then((response) => {
-        if (response.ok) {
-          setSubmissionStatus("success");
-          e.target.reset();
-        } else {
-          throw new Error("Failed to submit the form");
-        }
-      })
-      .catch((error) => {
-        console.error("Error!", error.message);
-        setSubmissionStatus("error");
-      })
-      .finally(() => {
-        setIsSubmitting(false);
+    const formData = new FormData(e.target);
+    const payload = Object.fromEntries(formData.entries());
+    console.log("Form Data:", payload);
 
-        setTimeout(() => {
-          setSubmissionStatus("");
-        }, 6000);
-      });
+    try {
+      const response = await axios.post(
+        "https://sanjeev-kumar-portfolio-backend.onrender.com/",
+        payload
+      );
+
+      if (response.status === 200) {
+        setSubmissionStatus("success");
+        e.target.reset();
+      } else {
+        throw new Error("Failed to submit the form");
+      }
+    } catch (error) {
+      console.error("Error!", error.message);
+      setSubmissionStatus("error");
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => {
+        setSubmissionStatus("");
+      }, 6000);
+    }
   };
 
   const socialLinks = [
@@ -111,7 +111,7 @@ const Contact = React.forwardRef((props, ref) => {
             >
               <div className="flex flex-col gap-4 w-full">
                 <Input
-                  name="Name"
+                  name="name"
                   type="text"
                   placeholder="Your Full Name"
                   id="name-field"
@@ -122,14 +122,14 @@ const Contact = React.forwardRef((props, ref) => {
                   placeholder="Email"
                   id="email-field"
                   label="Your Email"
-                  name="Email"
+                  name="email"
                 />
                 <Input
                   type="text"
                   placeholder="Type Message..."
                   id="message-field"
                   label="Message"
-                  name="Message"
+                  name="message"
                 />
               </div>
 
@@ -148,7 +148,7 @@ const Contact = React.forwardRef((props, ref) => {
                 </p>
               )}
               {submissionStatus === "error" && (
-                <p className="text-red-500 bg-blue-600 font-rubik mt-2 p-2">
+                <p className="text-red-500 font-rubik mt-2 p-2">
                   There was a problem. Please try again.
                 </p>
               )}
