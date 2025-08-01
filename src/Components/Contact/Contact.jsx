@@ -24,7 +24,7 @@ const Contact = React.forwardRef((props, ref) => {
 
     try {
       const response = await axios.post(
-        "https://sanjeev-kumar-portfolio-backend.onrender.com",
+        "https://sanjeev-kumar-portfolio-backend.onrender.com/send-form",
         payload
       );
 
