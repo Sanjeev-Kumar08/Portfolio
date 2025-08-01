@@ -27,7 +27,7 @@ const Contact = React.forwardRef((props, ref) => {
         "https://sanjeev-kumar-portfolio-backend.onrender.com/send-form",
         payload
       );
-
+      console.log("Response:", response);
       if (response.status === 200) {
         setSubmissionStatus("success");
         e.target.reset();
